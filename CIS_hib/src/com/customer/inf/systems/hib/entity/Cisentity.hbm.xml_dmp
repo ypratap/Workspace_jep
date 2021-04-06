@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.customer.inf.systems.hib.entity.CisEntity"
+		table="XTMPPERSON_TBL">
+		<id name="perId" type="int">
+			<column name="PERSON_ID" precision="5" scale="0" />
+			<generator class="assigned" />
+		</id>
+		<property name="perFirstName" type="string">
+			<column name="FIRST_NAME" length="20" not-null="true" />
+		</property>
+		<!-- 
+				<property name="perMiddleName" type="string">
+			<column name="MIDDLE_NAME" length="20" not-null="false" />
+		</property> -->
+		<property name="perLastName" type="string">
+			<column name="LAST_NAME" length="20" not-null="true" />
+		</property>
+
+		<property name="perEmail" type="string">
+			<column name="EMAIL" length="30" not-null="true" />
+		</property>
+		<property name="perPrimaryPh" type="string">
+			<column name="PHONE_1" length="20" not-null="true" />
+		</property>
+		<property name="perSecondaryPh" type="string">
+			<column name="PHONE_2" length="20" not-null="false"/>
+		</property>
+		<property name="addressId" type="int">
+			<column name="ADDRESS_ID" length="20" not-null="false" />
+		</property>
+		<property name="version" type="int">
+			<column name="VERSION" length="20" not-null="true" />
+		</property>
+
+
+	</class>
+</hibernate-mapping>
